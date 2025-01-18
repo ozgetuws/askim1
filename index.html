@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sürpriz!</title>
+    <style>
+        /* Sayfanın tasarımını yapıyoruz */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #image {
+            width: 80%; /* Görselin genişliği ekranın %80'i kadar */
+            max-width: 600px; /* Maksimum genişlik 600px */
+            height: auto; /* Yükseklik oranlı olarak ayarlanacak */
+            display: none; /* Başlangıçta gizli */
+            margin-top: 20px;
+        }
+
+        #message {
+            font-size: 30px;
+            color: #ff6347; /* Kırmızımsı renk */
+            font-weight: bold;
+            margin-top: 20px;
+            display: none; /* Başlangıçta gizli */
+        }
+
+        #surprise {
+            font-size: 35px;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Başlangıçta gösterilecek olan yazı -->
+    <div id="surprise">Sürpriz! 🎉</div>
+
+    <!-- Tıklanınca gösterilecek olan mesaj ve görsel -->
+    <div id="message">Seni seviyorum aşkımmmm! 💖</div>
+    <img id="image" src="bişideniyom.png" alt="Sevgi Mesajı">
+
+    <script>
+        // "Sürpriz!" yazısına tıklandığında mesaj ve görseli göster
+        document.getElementById("surprise").onclick = function() {
+            // "Sürpriz!" yazısını gizle
+            document.getElementById("surprise").style.display = "none";
+
+            // "Seni seviyorum aşkımmmm!" yazısını göster
+            document.getElementById("message").style.display = "block";
+
+            // Görseli göster
+            document.getElementById("image").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
